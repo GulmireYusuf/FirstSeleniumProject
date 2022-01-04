@@ -59,11 +59,7 @@ public class Driver {
                     driver = new SafariDriver();
                     break;
             }
-
-
-
         }
-
         return driver;
     }
 
