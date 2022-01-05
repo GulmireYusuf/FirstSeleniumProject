@@ -7,7 +7,12 @@ import utilitis.Driver;
 
 public class CalendarEventsPage extends BasePage {
 
-    @FindBy(css="[title='Create Calendar event']")
-    public WebElement createCalendarEvent;
+    public CalendarEventsPage() {
+        PageFactory.initElements(Driver.get(), this);
     }
+
+    @FindBy(css = "[title='Create Calendar event']")
+    public WebElement createCalendarEvent;
+
+}
 
