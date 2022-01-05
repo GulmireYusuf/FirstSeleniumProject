@@ -2,7 +2,7 @@ package tests.d3_webelement_class;
 
 import org.openqa.selenium.WebDriver;
 import utilitis.WebDriverFactory;
-import utilitis.BrowserUtils;
+import utilitis.BrowserUtilities;
 
 public class NavigationPractice {
     public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class NavigationPractice {
 
         driver.get("http://google.com");
 
-        BrowserUtils.wait(3);
+        BrowserUtilities.wait(3);
 
         System.out.println(driver.getTitle());
 

@@ -5,13 +5,13 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import utilitis.WebDriverFactory;
-import utilitis.BrowserUtils;
+import utilitis.BrowserUtilities;
 
 public class EnterTextPractice2 {
     public static void main(String[] args) {
         WebDriver driver= WebDriverFactory.getDriver("chrome");
         driver.get("http://practice.cybertekschool.com/forgot_password");
-        BrowserUtils.wait(2);
+        BrowserUtilities.wait(2);
         WebElement inputBox= driver.findElement(By.name("email"));
         inputBox.sendKeys("random@email.com", Keys.ENTER);
         WebElement confirmationMessage=driver.findElement(By.name("confirmation_message"));
@@ -22,7 +22,7 @@ public class EnterTextPractice2 {
         }else{
             System.out.println("Test Failed");
         }
-        BrowserUtils.wait(2);
+        BrowserUtilities.wait(2);
         driver.close();
     }
 }

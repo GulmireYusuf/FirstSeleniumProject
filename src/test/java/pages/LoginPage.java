@@ -8,9 +8,10 @@ import utilitis.Driver;
 
 public class LoginPage {
 
-    public LoginPage(){
-        PageFactory.initElements(Driver.get(),this);
+    public LoginPage(){   //constrauctor here// every page object model class must have this method
+        PageFactory.initElements(Driver.get(),this);//we need pagefactory class and initElement method to initializie object.
     }
+
     @FindBy(id="prependedInput")
     public WebElement userName;
 
@@ -19,5 +20,13 @@ public class LoginPage {
 
     @FindBy(name ="_submit")
     public WebElement loginButton;
+
+
+
+    public void login(String userNameStr, String passwordStr){
+        userName.sendKeys(userNameStr);
+        password.sendKeys(passwordStr);
+        loginButton.click();
+    }
 
 }

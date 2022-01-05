@@ -3,7 +3,7 @@ package tests.d5_LocatorsAndXpath;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import utilitis.WebDriverFactory;
-import utilitis.BrowserUtils;
+import utilitis.BrowserUtilities;
 
 public class TestsForLinkText {
     public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class TestsForLinkText {
         driver.get("http://practice.cybertekschool.com/");
 
         driver.findElement(By.linkText("Autocomplete")).click();
-        BrowserUtils.wait(2);
+        BrowserUtilities.wait(2);
         driver.quit();
     }
 }

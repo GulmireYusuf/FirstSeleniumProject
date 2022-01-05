@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import utilitis.WebDriverFactory;
-import utilitis.BrowserUtils;
+import utilitis.BrowserUtilities;
 
 public class EnterTextPractice {
 
@@ -15,7 +15,7 @@ public class EnterTextPractice {
         inputBox.sendKeys("random@email.com");
         WebElement button=driver.findElement(By.id("form_submit"));
         button.click();
-        BrowserUtils.wait(2);
+        BrowserUtilities.wait(2000);
         String expectedUrl="http://practice.cybertekschool.com/email_sent";
         String actualUrl= driver.getCurrentUrl();
         if(expectedUrl.equals(actualUrl)){

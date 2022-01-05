@@ -1,12 +1,10 @@
 package tests.d3_webelement_class;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import utilitis.BrowserUtils;
+import utilitis.BrowserUtilities;
 import utilitis.WebDriverFactory;
 
 public class VerifyURLNotChange {
@@ -17,7 +15,7 @@ public class VerifyURLNotChange {
 
         String expectedUrl=driver.getCurrentUrl();
         WebElement button= driver.findElement(By.id("form_submit"));
-        BrowserUtils.wait(2);
+        BrowserUtilities.wait(2);
         button.click();
         String actualUrl= driver.getCurrentUrl();
         if (actualUrl.equals(expectedUrl)){

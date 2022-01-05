@@ -3,7 +3,7 @@ package tests.d3_webelement_class;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import utilitis.BrowserUtils;
+import utilitis.BrowserUtilities;
 import utilitis.WebDriverFactory;
 
 public class VerifyURLChanged {
@@ -12,7 +12,7 @@ public class VerifyURLChanged {
         driver.get("http://practice.cybertekschool.com/forgot_password");
         WebElement emailInput= driver.findElement(By.name("email"));
         emailInput.sendKeys("random@email.com");
-        BrowserUtils.wait(2);
+        BrowserUtilities.wait(2);
         WebElement retrivePassword= driver.findElement(By.id("form_submit"));
         retrivePassword.click();
 
