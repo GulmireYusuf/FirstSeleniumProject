@@ -41,13 +41,23 @@ public class TestBase {
         reports.flush();
     }
     @BeforeMethod
-    public void setUpMethod() {
+    @Parameters("env")
+    public void setUpMethod(@Optional String env) {
+        System.out.println("env="+env);
+        //ENV is null use default url,
+        //if ENV is not null, get the url based on evn
+        if(env==null){
+            url=ConfigurationReader.get("url");
+        }else{
+            url=ConfigurationReader.get(env+"_url");
+        }
+
         driver=Driver.get();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        url=ConfigurationReader.get("url");
-        driver.get(url);
+
         actions=new Actions(driver);
         driver.manage().window().maximize();
+        driver.get(url);
     }
 
     @AfterMethod

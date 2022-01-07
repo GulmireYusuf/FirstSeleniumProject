@@ -22,6 +22,7 @@ public class NegativeLoginTestWithReports extends TestBase {
         Assert.assertEquals(driver.getCurrentUrl(),"https://app.vytrack.com/user/login");
         extentLogger.pass("PASS: wrong password test");
     }
+    // this test will fail
     @Test
     public void wrongUsernameTest(){
         extentLogger= reports.createTest("wrong username test");
@@ -33,7 +34,7 @@ public class NegativeLoginTestWithReports extends TestBase {
         extentLogger.info("click login button");
         loginPage.loginButton.click();
         extentLogger.info("verify page url");
-        Assert.assertEquals(driver.getCurrentUrl(),"https://google.com");
+        Assert.assertEquals(driver.getCurrentUrl(),"https://www.google.com");
         extentLogger.pass("PASS: wrong username test");
     }
 
