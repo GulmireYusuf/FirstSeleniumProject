@@ -98,7 +98,6 @@ public class WebTablesExamplesTest {
 
        }
 
-
    private int getNumberOfRows() {
         List<WebElement> allRowExcludingHeaders=driver.findElements(By.xpath("//table[@id='table1']/tbody/tr"));
         return allRowExcludingHeaders.size();
