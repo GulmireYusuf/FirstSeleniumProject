@@ -18,10 +18,10 @@ public abstract class BasePage {
     protected WebElement loaderMask;
 
     @FindBy(css = "h1[class='oro-subtitle']")
-    protected WebElement pageSubTitle;
+    public WebElement pageSubTitle;
 
     @FindBy(css = "#user-menu > a")
-    protected WebElement userName;
+    public WebElement userName;
 
     @FindBy(linkText = "Logout")
     public WebElement logOutLink;
